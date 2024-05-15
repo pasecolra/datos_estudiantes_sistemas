@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .forms {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        input[type="email"],
+        select {
+            width: calc(100% - 10px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        button[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .gap-4 {
+            gap: 20px;
+        }
+
+        .mb-4 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="forms">
+        <form action="">
+            <h1>Datos del estudiante</h1>
+
+            <!--- Nombres / apellid.--->
+            <p>
+                Apellidos: <input type="text" name="" id="apellidos"> Nombres: <input type="text" name="" id="nombres">
+            </p>
+
+            <!--- Nacimiento ---->
+            <p>
+                Fecha de nacimiento: <input type="date" name="" id="fecha_nacimiento"> Lugar de nacimiento: <input type="text" name="" id="lugar_nacimiento"> Edad: <input type="number" name="" id="edad" style="width: 40px;">
+            </p>
+
+            <!--- Tipo Documento --->
+            <p>
+                Tipo Documento Identidad: T.I: <input type="checkbox" name="" id="ti"> CC: <input type="checkbox" name="" id="cc"> Número Documento Identidad
+            </p>
+
+            <p>
+                Lugar Expedición Documento: <input type="text" name="" id="lugar_documento">
+            </p>
+
+            <!--- Dirección --->
+            <p>
+                Dirección: <input type="text" id="direccion"> Barrio: <input type="text" id="barrio"> Ciudad: <input type="text" id="cuidad">
+            </p>
+
+            <!--- Contacto ---->
+            <p>
+                Teléfono: <input type="text" id="tel_estudiante"> Celular: <input type="text" id="cel_estudiante">
+            </p>
+
+            <p>
+                E-mail personal: <input type="email" id="email_p"> E-mail Inst: <input type="email" name="" id="email_inst">
+            </p>
+            <div>
+                <label>Tipo de Sangre:</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>¿Sufre de alguna enfermedad?:</label>
+                <select>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                    <option value="Otra">Otra (Especifique)</option>
+                </select>
+            </div>
+            <div>
+                <label>Enfermedad:</label>
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mb-4">
+            <div>
+                <label>Estrato Socioeconómico:</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>Familias en Acción:</label>
+                <select>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div>
+                <label>Tipo de Religión:</label>
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mb-4">
+            <div>
+                <label>Relación Padres:</label>
+                <select>
+                    <option value="Casados">Casados</option>
+                    <option value="Divorciados">Divorciados</option>
+                    <option value="Unión Libre">Unión Libre</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+            <div>
+                <label>Detalles de la Relación:</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>Computadora en Casa:</label>
+                <select>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mb-4">
+            <div>
+                <label>Internet en Casa:</label>
+                <select>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <!-- Puedes agregar más campos aquí según sea necesario -->
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+</div>
+</body>
+</html>
