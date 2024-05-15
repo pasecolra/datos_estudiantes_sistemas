@@ -1,52 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="max-w-md mx-auto p-6 bg-white shadow">
-        <h2 class="text-2xl font-bold">Formulario</h2>
-        <form id="myForm" class="space-y-4">
-            <div>
-                <label for="apellidos" class="block text">Apellidos</label>
-                <input type="text" id="apellidos" name="apellidos" class="w-full px-3 py-2 border" required>
-            </div>
-            <div>
-                <label for="nombre" class="block text">Nombre</label>
-                <input type="text" id="nombre" name="nombre" class="w-full px-3 py-2" required>
-            </div>
-            <div>
-                <label for="fechaNacimiento" class="block text">Fecha de Nacimiento</label>
-                <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="w-full px-3 py-2" required>
-            </div>
-            <div>
-                <label for="lugarNacimiento" class="block text">Lugar de Nacimiento</label>
-                <input type="text" id="lugarNacimiento" name="lugarNacimiento" class="w-full px-3 py-2" required>
-            </div>
-            <div>
-                <label for="edad" class="block text">Edad</label>
-                <input type="number" id="edad" name="edad" class="w-full px-3 py-2" required>
-            </div>
-            <button type="submit" class="bg-blue-500 text-white p-2 rounded-lg w-full">Enviar</button>
-        </form>
-    </div>
-    
-    <script>
-        const form = document.getElementById('myForm');
-    
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
-            
-            console.log(data);
-        });
-    </script>
+    <div class="forms">
+        <form action="">
+            <h1>Datos del estudiante</h1>
 
+            <!--- Nombres / apellid.--->
+            <p>
+                Apellidos: <input type="text" name="" id="apellidos"> Nombres: <input type="text" name="" id="nombres">
+            </p>
+
+            <!--- Nacimiento ---->
+            <p>
+                Fecha de nacimiento: <input type="date" name="" id="fecha_nacimiento"> Lugar de nacimiento: <input type="text" name="" id="lugar_nacimiento"> Edad: <input type="number" name="" id="edad" style="width: 40px;">
+            </p>
+
+            <!--- Tipo Documento --->
+            <p>
+                Tipo Documento Identidad: T.I: <input type="checkbox" name="" id="ti"> CC: <input type="checkbox" name="" id="cc"> Número Documento Identidad
+            </p>
+
+            <p>
+                Lugar Expedición Documento: <input type="text" name="" id="lugar_documento">
+            </p>
+
+            <!--- Dirección --->
+            <p>
+                Dirección: <input type="text" id="direccion"> Barrio: <input type="text" id="barrio"> Ciudad: <input type="text" id="cuidad">
+            </p>
+
+            <!--- Contacto ---->
+            <p>
+                Teléfono: <input type="text" id="tel_estudiante"> Celular: <input type="text" id="cel_estudiante">
+            </p>
+
+            <p>
+                E-mail personal: <input type="email" id="email_p"> E-mail Inst: <input type="email" name="" id="email_inst">
+            </p>
+            <div>
+                <label>Tipo de Sangre:</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>¿Sufre de alguna enfermedad?:</label>
+                <select>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                    <option value="Otra">Otra (Especifique)</option>
+                </select>
+            </div>
+            <div>
+                <label>Enfermedad:</label>
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mb-4">
+            <div>
+                <label>Estrato Socioeconómico:</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>Familias en Acción:</label>
+                <select>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div>
+                <label>Tipo de Religión:</label>
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mb-4">
+            <div>
+                <label>Relación Padres:</label>
+                <select>
+                    <option value="Casados">Casados</option>
+                    <option value="Divorciados">Divorciados</option>
+                    <option value="Unión Libre">Unión Libre</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+            <div>
+                <label>Detalles de la Relación:</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>Computadora en Casa:</label>
+                <select>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 mb-4">
+            <div>
+                <label>Internet en Casa:</label>
+                <select>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <!-- Puedes agregar más campos aquí según sea necesario -->
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+</div>
 </body>
+
 </html>
